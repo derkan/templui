@@ -18,3 +18,4 @@ import "./slider/slider.js";
 import "./tabs/tabs.js";
 import "./textarea/textarea.js";
 import "./toast/toast.js";
+import "./tagsinput/tagsinput.js";
