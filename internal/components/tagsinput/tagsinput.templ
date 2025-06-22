@@ -29,8 +29,11 @@ templ TagsInput(p Props) {
 			for _, tag := range p.Value {
 				<div class="tags-input-chip flex items-center bg-primary text-xs border-transparent gap-1 px-1 rounded-md border py-0.5 items-center focus:ring-ring text-primary-foreground font-semibold">
 					<span>{ tag }</span>
-					<button type="button" class="tags-input-remove text-primary-foreground hover:text-destructive disabled:opacity-50 disabled:cursor-not-allowed"
-					disabled?={ p.Disabled }>
+					<button
+						type="button"
+						class="tags-input-remove text-primary-foreground hover:text-destructive disabled:opacity-50 disabled:cursor-not-allowed"
+						disabled?={ p.Disabled }
+					>
 						<svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 							<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
 						</svg>
@@ -44,7 +47,7 @@ templ TagsInput(p Props) {
 			placeholder={ p.Placeholder }
 			disabled?={ p.Disabled }
 			readonly?={ p.Readonly }
-		{ p.Attributes... }
+			{ p.Attributes... }
 		/>
 		<div class="tags-input-hidden-container">
 			for _, tag := range p.Value {
